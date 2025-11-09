@@ -1,11 +1,9 @@
-import axios from 'axios';
 import React from 'react';
 import myaxios from '../utils/myaxios';
 import { useNavigate } from 'react-router';
 
-const RegisterPage = () => {
-
-   const navigate = useNavigate();
+const SetPasswordPage = () => {
+       const navigate = useNavigate();
       const handleSubmit = (e) =>{
             e.preventDefault();
             const formData = new FormData(e.target);
@@ -28,34 +26,18 @@ const RegisterPage = () => {
       }
 
 
-return (
-     <div>
-            <div className="container">
+     return (
+        <div>
+           <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-10 animated fadeIn col-lg-10 center-screen">
                     <div className="card">
                         <div className="card-body">
-                            <h4>SIGN IN</h4>
+                            <h4>New Password</h4>
                             <br/>
                             <form onSubmit={handleSubmit}>
                               <div className="container-fluid m-0 p-0">
                                  <div className="row m-0 p-0">
-                                       <div className="col-md-4 p-2">
-                                          <label>Email Address</label>
-                                          <input id="email" placeholder="User Email" name="email" className="form-control" type="email"/>
-                                       </div>
-                                       <div className="col-md-4 p-2">
-                                          <label>First Name</label>
-                                          <input id="firstName" placeholder="First Name" name="firstName" className="form-control" type="text"/>
-                                       </div>
-                                       <div className="col-md-4 p-2">
-                                          <label>Last Name</label>
-                                          <input id="lastName" placeholder="Last Name" name="lastName" className="form-control" type="text"/>
-                                       </div>
-                                       <div className="col-md-4 p-2">
-                                          <label>Mobile Number</label>
-                                          <input id="mobile" placeholder="Mobile" name="mobile" className="form-control" type="mobile"/>
-                                       </div>
                                        <div className="col-md-4 p-2">
                                           <label>Password</label>
                                           <input id="password" placeholder="User Password" name="password" className="form-control" type="password"/>
@@ -72,9 +54,9 @@ return (
                     </div>
                 </div>
             </div>
-            </div>                     
-     </div>
-);
+            </div>                       
+        </div>
+     );
 };
 
-export default RegisterPage;
+export default SetPasswordPage;
